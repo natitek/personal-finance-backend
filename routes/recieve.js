@@ -7,4 +7,15 @@ router.get('/',(req,res) => {
 })
 
 
+router.get('/:cus_id/:amount/:type',(req,res) => {
+
+    const customer_id = req.params.cus_id;
+    const amount = req.params.amount;
+    const type = req.params.type;
+  
+  res.send(`user: ${customer_id} , amount ${amount} type ${type} `);
+})
+
+
+
 export default router;
